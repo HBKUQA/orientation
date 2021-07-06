@@ -35,6 +35,7 @@
         "drupal/module_filter": "^3.2",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
+        "drupal/simplesamlphp_auth": "^3.2",
         "drupal/smtp": "^1.0",
         "drupal/svg_image": "^1.14",
         "drupal/token": "^1.9",
