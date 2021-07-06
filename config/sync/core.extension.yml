@@ -11,6 +11,7 @@ module:
   color: 0
   comment: 0
   config: 0
+  consumers: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -35,8 +36,12 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  rest: 0
+  restui: 0
   search: 0
+  serialization: 0
   shortcut: 0
+  simple_oauth: 0
   simplesamlphp_auth: 0
   system: 0
   taxonomy: 0
