@@ -1,7 +1,7 @@
 # Ignore configuration files that may contain sensitive information
 .idea/
-/web/sites/*/*.settings*.php
-/web/sites/*/*.services*.yml
+/web/sites/*/*settings*.php
+/web/sites/*/*services*.yml
 
 /web/sites/*settings*.php
 /web/sites/*services*.yml
@@ -37,3 +37,6 @@
 /web/modules/contrib/
 /web/themes/contrib/
 /web/themes/custom/*/node_modules
+
+/keys
+/backup
