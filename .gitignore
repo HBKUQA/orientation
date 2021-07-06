@@ -1,38 +1,39 @@
 # Ignore configuration files that may contain sensitive information
 .idea/
-/web/sites/*/*settings*.php 
-/web/sites/*/*services*.yml 
-/web/sites/*settings*.php 
-/web/sites/*services*.yml 
+/web/sites/*/*.settings*.php
+/web/sites/*/*.services*.yml
+
+/web/sites/*settings*.php
+/web/sites/*services*.yml
 /web/sites/*sites*.php
 # Ignore paths that may contain user-generated content
 /web/sites/*/files/
-/web/sites/*/public/ 
+/web/sites/*/public/
 /web/sites/*/private/
 # Ignore paths that may contain temporary files
-/web/sites/*/translations/ 
+/web/sites/*/translations/
 /web/sites/*/tmp/
 /web/sites/*/cache/
 # Ignore drupal core (if not versioning drupal sources)
-/vendor/ 
-/web/core/ 
-/web/profiles/ 
-/web/.csslintrc 
-/web/.eslintignore 
-/web/.eslintrc.json 
-.gitattributes 
-/web/.ht.router.php 
-/web/.htaccess 
-/web/autoload.php 
-/web/example.gitignore 
-/web/index.php 
-/web/INSTALL.txt 
-/web/LICENSE.txt 
+/vendor/
+/web/core/
+/web/profiles/
+/web/.csslintrc
+/web/.eslintignore
+/web/.eslintrc.json
+.gitattributes
+/web/.ht.router.php
+/web/.htaccess
+/web/autoload.php
+/web/example.gitignore
+/web/index.php
+/web/INSTALL.txt
+/web/LICENSE.txt
 /web/README.txt
-/web/robots.txt 
-/web/update.php 
+/web/robots.txt
+/web/update.php
 /web/web.config
 # Templates and modules
-/web/modules/contrib/ 
-/web/themes/contrib/ 
+/web/modules/contrib/
+/web/themes/contrib/
 /web/themes/custom/*/node_modules
