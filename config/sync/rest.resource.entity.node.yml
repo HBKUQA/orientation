@@ -1,0 +1,22 @@
+uuid: c0ed57a0-4a10-4274-a493-724c4068a53f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - serialization
+    - simple_oauth
+    - user
+id: entity.node
+plugin_id: 'entity:node'
+granularity: resource
+configuration:
+  methods:
+    - GET
+    - POST
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - oauth2
+    - cookie

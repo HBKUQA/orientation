@@ -1,0 +1,11 @@
+uuid: 2401a50f-517e-4329-90d9-b169cbe3ff9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.student_review
+id: node.student_review
+target_entity_type_id: node
+target_bundle: student_review
+default_langcode: site_default
+language_alterable: false

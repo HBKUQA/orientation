@@ -1,0 +1,110 @@
+uuid: 4620bf1b-487f-4eb9-b228-c35b9fcc48de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.student_progress.field_process
+    - field.field.node.student_progress.field_program
+    - field.field.node.student_progress.field_student
+    - node.type.student_progress
+  module:
+    - field_group
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_basic
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Wrapper
+    group_basic:
+      children:
+        - title
+        - field_student
+        - field_program
+        - field_process
+      parent_name: group_wrapper
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: false
+      label: Basic
+id: node.student_progress.default
+targetEntityType: node
+bundle: student_progress
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_process:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_program:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_student:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true
+  promote: true
+  sticky: true

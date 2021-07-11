@@ -1,0 +1,23 @@
+uuid: 36f7f586-e6ef-493a-b8e7-554d63bfc266
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_introduction
+field_name: field_introduction
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
