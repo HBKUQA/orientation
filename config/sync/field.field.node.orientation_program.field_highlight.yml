@@ -1,0 +1,19 @@
+uuid: aa1ed795-45a8-43f4-a58f-030827e4996b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlight
+    - node.type.orientation_program
+id: node.orientation_program.field_highlight
+field_name: field_highlight
+entity_type: node
+bundle: orientation_program
+label: Highlight
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

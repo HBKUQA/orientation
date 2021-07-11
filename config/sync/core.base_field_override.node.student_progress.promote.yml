@@ -1,0 +1,22 @@
+uuid: 18ad8501-e2bc-4c22-8d11-4661e238604e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.student_progress
+id: node.student_progress.promote
+field_name: promote
+entity_type: node
+bundle: student_progress
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,76 @@
+uuid: aa82ce10-a0a8-4b44-81e7-5cf651a06529
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.orientation_chapter.field_paragraphs
+    - field.field.node.orientation_chapter.field_program
+    - field.field.node.orientation_chapter.field_video
+    - node.type.orientation_chapter
+  module:
+    - ds
+    - entity_reference_revisions
+    - file
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_video
+        - node_title
+        - field_paragraphs
+        - field_related
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: above
+        formatter: default
+id: node.orientation_chapter.full
+targetEntityType: node
+bundle: orientation_chapter
+mode: full
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+  field_video:
+    weight: 0
+    label: above
+    settings:
+      muted: false
+      width: 640
+      height: 480
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    type: file_video
+    region: ds_content
+hidden:
+  field_program: true
+  langcode: true
+  links: true

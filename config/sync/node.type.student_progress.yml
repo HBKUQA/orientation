@@ -1,0 +1,17 @@
+uuid: d858f2fa-f334-436b-978e-fe17fc9d7834
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Student Progress'
+type: student_progress
+description: 'Student Orientation Program process'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

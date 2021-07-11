@@ -1,0 +1,16 @@
+uuid: fbfc3fc8-c16a-4073-9d23-0029ccd368eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.orientation_chapter
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.orientation_chapter
+target_entity_type_id: node
+target_bundle: orientation_chapter
+default_langcode: en
+language_alterable: false

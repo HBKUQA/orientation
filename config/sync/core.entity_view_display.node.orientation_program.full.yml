@@ -1,0 +1,108 @@
+uuid: 64b4c988-7842-417c-8f62-225199b4b1a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.orientation_program.field_chapters
+    - field.field.node.orientation_program.field_description
+    - field.field.node.orientation_program.field_highlight
+    - field.field.node.orientation_program.field_introduction
+    - field.field.node.orientation_program.field_outcomes
+    - field.field.node.orientation_program.field_requirements
+    - node.type.orientation_program
+  module:
+    - ds
+    - file
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_introduction
+        - node_title
+        - field_highlight
+        - field_description
+        - field_requirements
+        - field_outcomes
+        - field_chapters
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: above
+        formatter: default
+id: node.orientation_program.full
+targetEntityType: node
+bundle: orientation_program
+mode: full
+content:
+  field_chapters:
+    type: entity_reference_label
+    weight: 6
+    region: ds_content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_description:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: ds_content
+  field_highlight:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: ds_content
+  field_introduction:
+    weight: 0
+    label: hidden
+    settings:
+      controls: true
+      multiple_file_display_type: tags
+      width: 640
+      height: 480
+      autoplay: false
+      loop: false
+      muted: false
+    third_party_settings: {  }
+    type: file_video
+    region: ds_content
+  field_outcomes:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+  field_requirements:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: ds_content
+hidden:
+  langcode: true
+  links: true

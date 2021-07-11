@@ -1,0 +1,27 @@
+uuid: d8ad9214-35c4-41bd-bedb-63fa96b979c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.orientation_chapter
+  module:
+    - file
+id: node.orientation_chapter.field_video
+field_name: field_video
+entity_type: node
+bundle: orientation_chapter
+label: Video
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'orientation-program/chapter/[date:custom:Y]'
+  file_extensions: 'mp4 m4v'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

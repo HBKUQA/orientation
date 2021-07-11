@@ -1,0 +1,19 @@
+uuid: 9e702caf-b4b6-4c0b-ac66-7c8894f54f23
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_program
+field_name: field_program
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

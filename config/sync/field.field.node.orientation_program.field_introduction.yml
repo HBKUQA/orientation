@@ -1,0 +1,27 @@
+uuid: 86b2733b-5c0f-4d82-800e-265d441e9128
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction
+    - node.type.orientation_program
+  module:
+    - file
+id: node.orientation_program.field_introduction
+field_name: field_introduction
+entity_type: node
+bundle: orientation_program
+label: Introduction
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'orientation-program/introduction/[date:custom:Y]'
+  file_extensions: 'mp4 m4v'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

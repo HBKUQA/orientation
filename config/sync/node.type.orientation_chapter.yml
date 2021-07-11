@@ -1,0 +1,17 @@
+uuid: d2865b52-cd29-4da2-8f4b-37b0d2af78ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Orientation Chapter'
+type: orientation_chapter
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
