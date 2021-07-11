@@ -1,0 +1,48 @@
+uuid: 376222fb-0efc-492c-96e7-56587294206e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.student_progress.field_process
+    - field.field.node.student_progress.field_program
+    - field.field.node.student_progress.field_student
+    - node.type.student_progress
+  module:
+    - user
+id: node.student_progress.default
+targetEntityType: node
+bundle: student_progress
+mode: default
+content:
+  field_process:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_program:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_student:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

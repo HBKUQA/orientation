@@ -1,0 +1,23 @@
+uuid: 6e2a1e50-f2c9-4e9b-b325-12ec5cdbd371
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process
+    - node.type.student_progress
+id: node.student_progress.field_process
+field_name: field_process
+entity_type: node
+bundle: student_progress
+label: Process
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

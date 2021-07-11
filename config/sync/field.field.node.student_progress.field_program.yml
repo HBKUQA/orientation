@@ -1,0 +1,28 @@
+uuid: a01126b2-81d5-4185-b953-c9536227f471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program
+    - node.type.orientation_program
+    - node.type.student_progress
+id: node.student_progress.field_program
+field_name: field_program
+entity_type: node
+bundle: student_progress
+label: Program
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      orientation_program: orientation_program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

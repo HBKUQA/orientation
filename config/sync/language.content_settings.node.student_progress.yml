@@ -1,0 +1,11 @@
+uuid: 668904b1-e16d-4b2f-80ba-84d39b473edb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.student_progress
+id: node.student_progress
+target_entity_type_id: node
+target_bundle: student_progress
+default_langcode: site_default
+language_alterable: false

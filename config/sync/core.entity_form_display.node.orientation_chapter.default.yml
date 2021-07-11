@@ -1,0 +1,153 @@
+uuid: 4f7ae718-ff41-4b74-95b5-5ef3756422b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.orientation_chapter.field_paragraphs
+    - field.field.node.orientation_chapter.field_program
+    - field.field.node.orientation_chapter.field_video
+    - node.type.orientation_chapter
+  module:
+    - field_group
+    - file
+    - paragraphs
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_basic
+        - group_paragraphs
+        - group_orientation_program
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Wrapper
+    group_basic:
+      children:
+        - langcode
+        - title
+        - field_video
+      parent_name: group_wrapper
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: false
+      label: Basic
+    group_paragraphs:
+      children:
+        - field_paragraphs
+      parent_name: group_wrapper
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: false
+      label: Paragraphs
+    group_orientation_program:
+      children:
+        - field_program
+      parent_name: group_wrapper
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Orientation Program'
+id: node.orientation_chapter.default
+targetEntityType: node
+bundle: orientation_chapter
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_paragraphs:
+    type: paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: paragraph
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: '0'
+    third_party_settings: {  }
+    region: content
+  field_program:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_video:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  path: true
+  promote: true
+  sticky: true
+  translation: true

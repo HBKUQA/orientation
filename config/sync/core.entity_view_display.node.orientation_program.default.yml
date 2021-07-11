@@ -1,0 +1,72 @@
+uuid: f8b2cd1f-c24d-48b9-bdc1-f27966a1ed14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.orientation_program.field_chapters
+    - field.field.node.orientation_program.field_description
+    - field.field.node.orientation_program.field_highlight
+    - field.field.node.orientation_program.field_introduction
+    - field.field.node.orientation_program.field_outcomes
+    - field.field.node.orientation_program.field_requirements
+    - node.type.orientation_program
+  module:
+    - file
+    - user
+id: node.orientation_program.default
+targetEntityType: node
+bundle: orientation_program
+mode: default
+content:
+  field_chapters:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_highlight:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_introduction:
+    weight: 105
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_outcomes:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_requirements:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

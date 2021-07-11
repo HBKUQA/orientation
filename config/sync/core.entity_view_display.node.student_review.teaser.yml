@@ -1,0 +1,27 @@
+uuid: 12d6d520-49b6-46fe-a7ba-2578483c96d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.student_review.field_program
+    - field.field.node.student_review.field_review
+    - field.field.node.student_review.field_student
+    - node.type.student_review
+  module:
+    - user
+id: node.student_review.teaser
+targetEntityType: node
+bundle: student_review
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_program: true
+  field_review: true
+  field_student: true
+  langcode: true
