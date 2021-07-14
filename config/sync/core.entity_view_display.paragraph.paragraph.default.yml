@@ -6,6 +6,27 @@ dependencies:
     - field.field.paragraph.paragraph.field_description
     - field.field.paragraph.paragraph.field_title
     - paragraphs.paragraphs_type.paragraph
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_title
+        - field_description
 id: paragraph.paragraph.default
 targetEntityType: paragraph
 bundle: paragraph

@@ -1,0 +1,24 @@
+uuid: 3026a015-de73-4311-bc12-67be36f1a8dc
+langcode: en
+status: true
+dependencies: {  }
+id: manager
+label: Manager
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access user profiles'
+  - 'administer nodes'
+  - 'create orientation_chapter content'
+  - 'create orientation_program content'
+  - 'create student content'
+  - 'edit any orientation_chapter content'
+  - 'edit any orientation_program content'
+  - 'edit any student content'
+  - 'edit own orientation_chapter content'
+  - 'edit own orientation_program content'
+  - 'edit own student content'
+  - 'view own unpublished content'
+  - 'view unpublished paragraphs'

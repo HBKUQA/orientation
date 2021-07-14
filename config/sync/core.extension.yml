@@ -29,6 +29,7 @@ module:
   layout_discovery: 0
   link: 0
   locale: 0
+  mail_login: 0
   menu_link_content: 0
   menu_ui: 0
   module_filter: 0
@@ -39,6 +40,8 @@ module:
   path_alias: 0
   rdf: 0
   rest: 0
+  rest_views: 0
+  rest_views_revisions: 0
   restui: 0
   search: 0
   serialization: 0

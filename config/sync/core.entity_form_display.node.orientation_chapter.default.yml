@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.orientation_chapter.field_paragraphs
     - field.field.node.orientation_chapter.field_program
     - field.field.node.orientation_chapter.field_video
+    - field.field.node.orientation_chapter.field_video_duration
     - node.type.orientation_chapter
   module:
     - field_group
@@ -113,6 +114,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_video_duration:
+    weight: 35
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   langcode:
     type: language_select
