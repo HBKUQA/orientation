@@ -7,7 +7,7 @@
 /web/sites/*services*.yml
 /web/sites/*sites*.php
 # Ignore paths that may contain user-generated content
-/web/sites/*/files/.htacesss
+/web/sites/*/files/.htacess
 /web/sites/*/files/css
 /web/sites/*/files/js
 /web/sites/*/files/php
