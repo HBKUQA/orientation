@@ -7,21 +7,46 @@ dependencies:
     - field.field.node.orientation_chapter.field_paragraphs
     - field.field.node.orientation_chapter.field_program
     - field.field.node.orientation_chapter.field_video
+    - field.field.node.orientation_chapter.field_video_duration
     - node.type.orientation_chapter
   module:
+    - ds
     - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
 id: node.orientation_chapter.teaser
 targetEntityType: node
 bundle: orientation_chapter
 mode: teaser
-content:
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
+content: {  }
 hidden:
   field_paragraphs: true
   field_program: true
   field_video: true
+  field_video_duration: true
   langcode: true
+  links: true

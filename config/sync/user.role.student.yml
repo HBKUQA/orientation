@@ -1,0 +1,17 @@
+uuid: f7ffd8b2-bb64-4aa6-a900-40fa2e4e5eb3
+langcode: en
+status: true
+dependencies: {  }
+id: student
+label: Student
+weight: 4
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access user profiles'
+  - 'create student_progress content'
+  - 'create student_review content'
+  - 'edit own student content'
+  - 'edit own student_progress content'
+  - 'view own unpublished content'

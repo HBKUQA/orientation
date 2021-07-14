@@ -1,8 +1,10 @@
 # Ignore configuration files that may contain sensitive information
 .idea/
 /web/sites/*/*settings*.php
-/web/sites/*/*services*.yml
+
 /front 
+/web/sites/*/*.services*.yml
+
 
 /web/sites/*settings*.php
 /web/sites/*services*.yml

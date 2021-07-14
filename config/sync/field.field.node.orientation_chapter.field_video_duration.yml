@@ -1,0 +1,25 @@
+uuid: f4102d41-1d24-4f20-9280-e31fb477f132
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_duration
+    - node.type.orientation_chapter
+id: node.orientation_chapter.field_video_duration
+field_name: field_video_duration
+entity_type: node
+bundle: orientation_chapter
+label: 'Video Duration'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 60
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: S
+field_type: integer
