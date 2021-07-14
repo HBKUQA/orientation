@@ -10,7 +10,12 @@
 /web/sites/*services*.yml
 /web/sites/*sites*.php
 # Ignore paths that may contain user-generated content
-/web/sites/*/files/
+/web/sites/*/files/.htacesss
+/web/sites/*/files/css
+/web/sites/*/files/js
+/web/sites/*/files/php
+/web/sites/*/files/transltations
+
 /web/sites/*/public/
 /web/sites/*/private/
 # Ignore paths that may contain temporary files
