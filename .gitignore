@@ -2,6 +2,7 @@
 .idea/
 /web/sites/*/*settings*.php
 /web/sites/*/*services*.yml
+/front 
 
 /web/sites/*settings*.php
 /web/sites/*services*.yml
