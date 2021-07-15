@@ -1,0 +1,39 @@
+uuid: 36171bb8-ed0e-4ff2-b78c-4edaa399037c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.orientation_attachment.field_attachment
+    - field.field.node.orientation_attachment.field_program
+    - node.type.orientation_attachment
+  module:
+    - file
+    - user
+id: node.orientation_attachment.default
+targetEntityType: node
+bundle: orientation_attachment
+mode: default
+content:
+  field_attachment:
+    weight: 101
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_program:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

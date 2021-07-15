@@ -2,7 +2,7 @@
 .idea/
 /web/sites/*/*settings*.php
 
-/front 
+/front
 /web/sites/*/*.services*.yml
 
 
@@ -14,7 +14,8 @@
 /web/sites/*/files/css
 /web/sites/*/files/js
 /web/sites/*/files/php
-/web/sites/*/files/transltations
+/web/sites/*/files/translations
+/web/sites/*/files/config*
 
 /web/sites/*/public/
 /web/sites/*/private/

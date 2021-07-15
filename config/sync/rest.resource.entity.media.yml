@@ -1,14 +1,13 @@
-uuid: 7b14ec50-ccb5-4a98-be98-10f562ee3b6e
+uuid: 0025870a-e035-4d22-8bc4-bb908f69367d
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
+    - media
     - serialization
     - simple_oauth
-    - user
-id: entity.paragraph
-plugin_id: 'entity:paragraph'
+id: entity.media
+plugin_id: 'entity:media'
 granularity: resource
 configuration:
   methods:
@@ -20,4 +19,3 @@ configuration:
     - json
   authentication:
     - oauth2
-    - cookie

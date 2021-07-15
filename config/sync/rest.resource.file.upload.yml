@@ -1,23 +1,18 @@
-uuid: 7b14ec50-ccb5-4a98-be98-10f562ee3b6e
+uuid: a4ab1678-fef9-4b07-8cba-448727626347
 langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
+    - file
     - serialization
     - simple_oauth
-    - user
-id: entity.paragraph
-plugin_id: 'entity:paragraph'
+id: file.upload
+plugin_id: 'file:upload'
 granularity: resource
 configuration:
   methods:
-    - GET
     - POST
-    - DELETE
-    - PATCH
   formats:
     - json
   authentication:
     - oauth2
-    - cookie

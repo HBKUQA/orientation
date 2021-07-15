@@ -1,0 +1,11 @@
+uuid: 2b9c7934-c767-419e-a4d4-8dfe96487777
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.orientation_attachment
+id: node.orientation_attachment
+target_entity_type_id: node
+target_bundle: orientation_attachment
+default_langcode: site_default
+language_alterable: false

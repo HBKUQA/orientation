@@ -1,0 +1,27 @@
+uuid: cef8cd00-d6bb-4d2a-a900-e472d19738c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachment
+    - node.type.orientation_attachment
+  module:
+    - file
+id: node.orientation_attachment.field_attachment
+field_name: field_attachment
+entity_type: node
+bundle: orientation_attachment
+label: attachment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'orientation-program/introduction/[date:custom:Y]'
+  file_extensions: 'doc pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,20 +1,18 @@
-uuid: 6258dbd3-b339-4921-a2d7-d52b57deb023
+uuid: d569d8da-90c2-48d6-b640-679996ab7d97
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_chapters
-    - field.storage.node.field_description
-    - field.storage.node.field_introduction
     - node.type.orientation_program
   module:
-    - file
     - node
     - rest
+    - rest_views
     - serialization
     - user
-id: api_orientation_programs
-label: 'API Orientation Programs'
+id: api_preview_orientation_programs
+label: 'API Preview Orientation Programs'
 module: views
 description: ''
 tag: ''
@@ -409,10 +407,10 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-        field_description:
-          id: field_description
-          table: node__field_description
-          field: field_description
+        field_chapters_export:
+          id: field_chapters_export
+          table: node__field_chapters
+          field: field_chapters_export
           relationship: none
           group_type: group
           admin_label: ''
@@ -457,144 +455,18 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_chapters:
-          id: field_chapters
-          table: node__field_chapters
-          field: field_chapters
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
           click_sort_column: target_id
           type: entity_reference_entity_id
           settings: {  }
           group_column: target_id
           group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ','
-          field_api_classes: false
-          plugin_id: field
-        field_introduction:
-          id: field_introduction
-          table: node__field_introduction
-          field: field_introduction
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: file_url_plain
-          settings: {  }
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          group_rows: 1
+          delta_limit: '0'
+          delta_offset: '0'
+          delta_reversed: 0
+          delta_first_last: 0
+          field_api_classes: 0
+          plugin_id: field_export
       filters:
         type:
           id: type
@@ -636,8 +508,6 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_chapters'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_introduction'
   rest_export_api_programs:
     display_plugin: rest_export
     id: rest_export_api_programs
@@ -645,11 +515,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/programs
+      path: api/programs/preview
       pager:
-        type: some
+        type: none
         options:
-          items_per_page: 10
           offset: 0
       style:
         type: serializer
@@ -687,5 +556,3 @@ display:
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_chapters'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_introduction'

@@ -1,0 +1,25 @@
+uuid: 9b7dcb09-fc30-4a23-9cbb-19ec29c3b6c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.orientation_attachment.field_attachment
+    - field.field.node.orientation_attachment.field_program
+    - node.type.orientation_attachment
+  module:
+    - user
+id: node.orientation_attachment.teaser
+targetEntityType: node
+bundle: orientation_attachment
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attachment: true
+  field_program: true
+  langcode: true

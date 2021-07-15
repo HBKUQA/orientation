@@ -1,0 +1,28 @@
+uuid: 4bb45a42-f00a-485a-a8b8-2329a2acb5f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program
+    - node.type.orientation_attachment
+    - node.type.orientation_program
+id: node.orientation_attachment.field_program
+field_name: field_program
+entity_type: node
+bundle: orientation_attachment
+label: Program
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      orientation_program: orientation_program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

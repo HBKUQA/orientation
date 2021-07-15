@@ -1,0 +1,22 @@
+uuid: af93da47-bc52-4895-a1c8-914c2e9f41ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.orientation_attachment
+id: node.orientation_attachment.promote
+field_name: promote
+entity_type: node
+bundle: orientation_attachment
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
