@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_video
     - field.storage.node.field_video_duration
     - node.type.orientation_chapter
-    - node.type.orientation_program
     - user.role.administrator
     - user.role.anonymous
     - user.role.authenticated
@@ -1469,7 +1468,7 @@ display:
           id: nid
           table: node_field_data
           field: nid
-          relationship: field_chapters
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -1535,7 +1534,7 @@ display:
           id: title
           table: node_field_data
           field: title
-          relationship: field_chapters
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -1600,7 +1599,7 @@ display:
           id: field_video_duration
           table: node__field_video_duration
           field: field_video_duration
-          relationship: field_chapters
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -1664,7 +1663,7 @@ display:
           id: changed
           table: node_field_data
           field: changed
-          relationship: field_chapters
+          relationship: none
           group_type: group
           admin_label: ''
           label: ''
@@ -1800,10 +1799,10 @@ display:
         relationships: false
         sorts: false
       arguments:
-        nid:
-          id: nid
-          table: node_field_data
-          field: nid
+        field_program_target_id:
+          id: field_program_target_id
+          table: node__field_program
+          field: field_program_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -1833,70 +1832,13 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: node
-          entity_field: nid
-          plugin_id: node_nid
+          plugin_id: numeric
       filters:
         status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
           id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value:
-            orientation_program: orientation_program
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-        status_1:
-          id: status_1
           table: node_field_data
           field: status
-          relationship: field_chapters
+          relationship: none
           group_type: group
           admin_label: ''
           operator: '='
@@ -1929,28 +1871,61 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          plugin_id: boolean
           entity_type: node
           entity_field: status
-          plugin_id: boolean
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            orientation_chapter: orientation_chapter
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       filter_groups:
         operator: AND
         groups:
           1: AND
       relationships:
-        field_chapters:
-          id: field_chapters
-          table: node__field_chapters
-          field: field_chapters
-          relationship: none
-          group_type: group
-          admin_label: 'field_chapters: Content'
-          required: true
-          plugin_id: standard
         uid:
           id: uid
           table: node_field_data
           field: uid
-          relationship: field_chapters
+          relationship: none
           group_type: group
           admin_label: author
           required: true
