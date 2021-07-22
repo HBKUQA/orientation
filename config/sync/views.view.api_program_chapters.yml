@@ -933,6 +933,10 @@ display:
           entity_type: node
           entity_field: nid
           plugin_id: node_nid
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
