@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.student_progress.field_process
     - field.field.node.student_progress.field_program
-    - field.field.node.student_progress.field_student
     - node.type.student_progress
   module:
     - user
@@ -23,5 +22,4 @@ content:
 hidden:
   field_process: true
   field_program: true
-  field_student: true
   langcode: true

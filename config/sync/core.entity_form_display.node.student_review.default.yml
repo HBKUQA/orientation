@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.student_review.field_program
     - field.field.node.student_review.field_review
-    - field.field.node.student_review.field_student
     - node.type.student_review
   module:
     - field_group
@@ -67,16 +66,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_student:
-    weight: 2
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   status:
     type: boolean_checkbox

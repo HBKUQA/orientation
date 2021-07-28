@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.student_review.field_program
     - field.field.node.student_review.field_review
-    - field.field.node.student_review.field_student
     - node.type.student_review
   module:
     - user
@@ -23,5 +22,4 @@ content:
 hidden:
   field_program: true
   field_review: true
-  field_student: true
   langcode: true
