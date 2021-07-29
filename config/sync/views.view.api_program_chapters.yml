@@ -379,17 +379,17 @@ display:
           id: created
           table: node_field_data
           field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
           granularity: second
+          entity_type: node
+          entity_field: created
+          plugin_id: date
       header: {  }
       footer: {  }
       empty: {  }
@@ -980,7 +980,7 @@ display:
               raw_output: false
             field_program:
               alias: ''
-              raw_output: false
+              raw_output: true
             status:
               alias: ''
               raw_output: false
@@ -1417,6 +1417,54 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        field_program_target_id_1:
+          id: field_program_target_id_1
+          table: node__field_program
+          field: field_program_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not empty'
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_program_target_id_1_op
+            label: 'Program (field_program)'
+            description: ''
+            use_operator: false
+            operator: field_program_target_id_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_program_target_id_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              manager: '0'
+              student: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       filter_groups:
         operator: AND
         groups:
