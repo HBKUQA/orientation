@@ -288,6 +288,8 @@ display:
             name:
               alias: ''
               raw_output: false
+      auth:
+        - oauth2
     cache_metadata:
       max-age: -1
       contexts:
@@ -410,6 +412,8 @@ display:
         operator: AND
         groups:
           1: AND
+      auth:
+        - oauth2
     cache_metadata:
       max-age: -1
       contexts:

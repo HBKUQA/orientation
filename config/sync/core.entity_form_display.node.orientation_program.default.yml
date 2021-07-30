@@ -9,10 +9,13 @@ dependencies:
     - field.field.node.orientation_program.field_introduction
     - field.field.node.orientation_program.field_outcomes
     - field.field.node.orientation_program.field_requirements
+    - field.field.node.orientation_program.field_thumbnail
+    - image.style.thumbnail
     - node.type.orientation_program
   module:
     - field_group
     - file
+    - image
     - path
 third_party_settings:
   field_group:
@@ -136,6 +139,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_thumbnail:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
     region: content
   langcode:
     type: language_select

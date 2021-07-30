@@ -1367,7 +1367,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: api/student/%/review
+      path: api/student/program/%/review
       pager:
         type: none
         options:

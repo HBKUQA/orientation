@@ -23,6 +23,7 @@
         "drupal/core-composer-scaffold": "^8.8",
         "drupal/core-project-message": "^8.8",
         "drupal/core-recommended": "^8.8",
+        "drupal/cors": "^1.0",
         "drupal/crop": "^2.1",
         "drupal/ctools": "^3.7",
         "drupal/devel": "^4.1",
