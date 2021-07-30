@@ -51,7 +51,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_process:
-    weight: 4
+    weight: 26
     settings:
       placeholder: ''
     third_party_settings: {  }
