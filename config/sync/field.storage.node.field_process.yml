@@ -1,4 +1,4 @@
-uuid: edca0314-d0b3-4d34-9421-684bb0c643a8
+uuid: e2098b78-b3e3-4545-8915-596e49145693
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,8 @@ dependencies:
 id: node.field_process
 field_name: field_process
 entity_type: node
-type: integer
-settings:
-  unsigned: false
-  size: normal
+type: float
+settings: {  }
 module: core
 locked: false
 cardinality: 1
