@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.orientation_attachment
     - node.type.orientation_chapter
     - node.type.orientation_program
     - node.type.student_review
@@ -267,7 +266,6 @@ display:
           admin_label: ''
           operator: in
           value:
-            orientation_attachment: orientation_attachment
             orientation_chapter: orientation_chapter
             orientation_program: orientation_program
             student_review: student_review
