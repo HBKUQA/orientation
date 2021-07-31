@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.orientation_chapter.field_paragraphs
     - field.field.node.orientation_chapter.field_program
+    - field.field.node.orientation_chapter.field_thumbnail
     - field.field.node.orientation_chapter.field_video
     - field.field.node.orientation_chapter.field_video_duration
     - node.type.orientation_chapter
@@ -73,6 +74,7 @@ content:
     region: ds_content
 hidden:
   field_program: true
+  field_thumbnail: true
   field_video_duration: true
   langcode: true
   links: true

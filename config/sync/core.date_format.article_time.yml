@@ -1,0 +1,8 @@
+uuid: a1eadee9-246c-453f-89cd-a6f859670aff
+langcode: en
+status: true
+dependencies: {  }
+id: article_time
+label: 'Article Time'
+locked: false
+pattern: 'd M, Y'
