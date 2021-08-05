@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.orientation_program.field_description
     - field.field.node.orientation_program.field_highlight
     - field.field.node.orientation_program.field_introduction
+    - field.field.node.orientation_program.field_is_required
     - field.field.node.orientation_program.field_outcomes
     - field.field.node.orientation_program.field_requirements
     - field.field.node.orientation_program.field_thumbnail
@@ -105,6 +106,7 @@ content:
     type: basic_string
     region: ds_content
 hidden:
+  field_is_required: true
   field_thumbnail: true
   langcode: true
   links: true

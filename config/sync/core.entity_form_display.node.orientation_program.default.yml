@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.orientation_program.field_description
     - field.field.node.orientation_program.field_highlight
     - field.field.node.orientation_program.field_introduction
+    - field.field.node.orientation_program.field_is_required
     - field.field.node.orientation_program.field_outcomes
     - field.field.node.orientation_program.field_requirements
     - field.field.node.orientation_program.field_thumbnail
@@ -123,6 +124,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_is_required:
+    weight: 28
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_outcomes:
     weight: 13

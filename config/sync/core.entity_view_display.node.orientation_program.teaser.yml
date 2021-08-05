@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.orientation_program.field_description
     - field.field.node.orientation_program.field_highlight
     - field.field.node.orientation_program.field_introduction
+    - field.field.node.orientation_program.field_is_required
     - field.field.node.orientation_program.field_outcomes
     - field.field.node.orientation_program.field_requirements
     - field.field.node.orientation_program.field_thumbnail
@@ -29,6 +30,7 @@ hidden:
   field_description: true
   field_highlight: true
   field_introduction: true
+  field_is_required: true
   field_outcomes: true
   field_requirements: true
   field_thumbnail: true

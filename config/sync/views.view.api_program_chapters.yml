@@ -1986,6 +1986,10 @@ display:
           plugin_id: standard
       display_description: ''
       sorts: {  }
+      pager:
+        type: none
+        options:
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
