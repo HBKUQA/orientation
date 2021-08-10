@@ -6,6 +6,7 @@ use Drupal\Core\Logger\LoggerChannelInterface;
 use Drupal\Core\Path\CurrentPathStack;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\TrustedRedirectResponse;
+use Drupal\key_auth\KeyAuth;
 use Drupal\rules\Core\RulesActionBase;
 use Drupal\user\UserInterface;
 
@@ -52,6 +53,13 @@ class RedirectUser extends RulesActionBase implements ContainerFactoryPluginInte
   protected $request;
 
   /**
+   * The current request.
+   *
+   * @var \Drupal\key_auth\KeyAuthInterface
+   */
+  protected $key_auth;
+
+  /**
    * Constructs a SystemPageRedirect object.
    *
    * @param array $configuration
@@ -67,9 +75,10 @@ class RedirectUser extends RulesActionBase implements ContainerFactoryPluginInte
    * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
    *   The request stack service.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, LoggerChannelInterface $logger, CurrentPathStack $current_path_stack, RequestStack $request_stack) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, LoggerChannelInterface $logger, CurrentPathStack $current_path_stack, RequestStack $request_stack, KeyAuth $key_auth) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->logger = $logger;
+    $this->key_auth = $key_auth;
     $this->currentPathStack = $current_path_stack;
     $this->request = $request_stack->getCurrentRequest();
   }
@@ -84,7 +93,8 @@ class RedirectUser extends RulesActionBase implements ContainerFactoryPluginInte
       $plugin_definition,
       $container->get('logger.channel.rules_debug'),
       $container->get('path.current'),
-      $container->get('request_stack')
+      $container->get('request_stack'),
+      $container->get('key_auth')
     );
   }
 
@@ -95,6 +105,13 @@ class RedirectUser extends RulesActionBase implements ContainerFactoryPluginInte
     // Insert code here.
 
     $api_key = $account->get('api_key')->value;
+    if (empty($api_key)) {
+      if ($this->key_auth instanceof \Drupal\key_auth\KeyAuthInterface) {
+        $api_key = $this->key_auth->generateKey();
+        $account->set('api_key', $api_key)->save();
+      }
+    }
+
     $url = 'https://hbku-soos.boufaied.com/hbku?api_key=' . $api_key;
     $this->request->attributes->set('_rules_redirect_action_url', $url);
   }
