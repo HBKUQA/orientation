@@ -1,0 +1,7 @@
+name: 'hbku'
+type: module
+description: 'Hbku Custom Module'
+core: 8.x
+package: 'hbku'
+dependencies:
+  - rules

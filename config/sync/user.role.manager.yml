@@ -64,6 +64,7 @@ permissions:
   - 'update any media'
   - 'update media'
   - 'update paragraph content paragraph'
+  - 'use key authentication'
   - 'view all media revisions'
   - 'view own unpublished content'
   - 'view own unpublished media'

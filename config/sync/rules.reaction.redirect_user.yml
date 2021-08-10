@@ -1,0 +1,54 @@
+uuid: 8b8d4918-411b-4842-bf58-feb348917deb
+langcode: en
+status: true
+dependencies: {  }
+id: redirect_user
+label: 'Redirect Student'
+events:
+  -
+    event_name: rules_user_login
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 002d83c7-246f-42bc-843e-4f2f1a190690
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 7cee0e2c-2606-43a5-820a-757d01e2d928
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: 5edd0235-ecd3-4ba2-afb9-9bd53128a10f
+        weight: 0
+        context_values:
+          roles:
+            - student
+          operation: AND
+        context_mapping:
+          user: '@user.current_user_context:current_user'
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_user_has_role
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 6152cec8-38a2-44e0-b0e7-7590ca3a2589
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: fa6f8df9-ed12-4c97-b59d-1d12b94c2f44
+        weight: 0
+        context_values: {  }
+        context_mapping:
+          user: account
+        context_processors: {  }
+        provides_mapping: {  }
+        action_id: redirect_user

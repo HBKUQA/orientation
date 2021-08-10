@@ -17,5 +17,6 @@ permissions:
   - 'delete own student_review content'
   - 'edit own student_progress content'
   - 'edit own student_review content'
+  - 'use key authentication'
   - 'view own unpublished content'
   - 'view unpublished paragraphs'
