@@ -1,29 +1,31 @@
 langcode: en
-activate: false
-mail_attr: mail
-unique_id: eduPersonPrincipalName
-user_name: eduPersonPrincipalName
-auth_source: default-sp
-login_link_show: true
+activate: true
+mail_attr: 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn'
+unique_id: uid
+user_name: uid
+auth_source: hbku-sp
+login_link_show: false
 login_link_display_name: 'Federated login'
 header_no_cache: false
 role:
-  population: null
-  eval_every_time: false
+  population: 'student:http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn,~=,@hbku.edu.qa'
+  eval_every_time: true
 register_users: true
 allow:
   set_drupal_pwd: true
   default_login: true
-  default_login_roles: {  }
+  default_login_roles:
+    administrator: administrator
+    manager: manager
   default_login_users: '1'
-logout_goto_url: null
+logout_goto_url: ''
 user_register_original: visitors_admin_approval
 sync:
   mail: true
   user_name: true
 autoenablesaml: false
-debug: false
-secure: false
+debug: true
+secure: true
 httponly: false
 _core:
   default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs
