@@ -50,3 +50,4 @@
 
 /keys
 #/backup
+/config/sync/simplesamlphp_auth.settings.yml
