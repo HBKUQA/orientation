@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - file
+    - key_auth
     - serialization
     - simple_oauth
 id: file.upload
@@ -15,4 +16,5 @@ configuration:
   formats:
     - json
   authentication:
+    - key_auth
     - oauth2

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - key_auth
     - media
     - serialization
     - simple_oauth
@@ -18,4 +19,5 @@ configuration:
   formats:
     - json
   authentication:
+    - key_auth
     - oauth2

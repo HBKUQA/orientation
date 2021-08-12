@@ -1,0 +1,34 @@
+login:
+  authenticated:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+  administrator:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+  manager:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+  student:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+logout:
+  authenticated:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+  administrator:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+  manager:
+    redirect_url: ''
+    weight: 0
+    allow_destination: false
+  student:
+    redirect_url: 'http://localhost:3000/'
+    allow_destination: true
+    weight: 0
