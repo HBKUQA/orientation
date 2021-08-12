@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0cbeb1fafb83a162579b88c8578d169e",
+    "content-hash": "ad071e89028dbaa6996aa559f96937a5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2736,6 +2736,57 @@
             "homepage": "https://drupal.org/project/redirect_after_login",
             "support": {
                 "source": "https://git.drupalcode.org/project/redirect_after_login"
+            }
+        },
+        {
+            "name": "drupal/redirect_after_logout",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/redirect_after_logout.git",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/redirect_after_logout-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "ac4493b38bd0899b5013e7fb45b5fe10b4f40696"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1600080056",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Kurucz István (nevergone)",
+                    "homepage": "https://www.drupal.org/u/nevergone",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Prashant Chauhan (Prashant.c)",
+                    "homepage": "https://www.drupal.org/u/prashantc",
+                    "role": "Co-maintainer, Drupal 8 port"
+                }
+            ],
+            "description": "User redirect, after logout.",
+            "homepage": "https://drupal.org/project/redirect_after_logout",
+            "support": {
+                "source": "https://cgit.drupalcode.org/redirect_after_logout",
+                "issues": "https://drupal.org/project/issues/redirect_after_logout"
             }
         },
         {
