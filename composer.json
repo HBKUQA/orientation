@@ -28,7 +28,7 @@
         "drupal/ctools": "^3.7",
         "drupal/devel": "^4.1",
         "drupal/ds": "^3.13",
-        "drupal/field_group": "^3.1",
+        "drupal/field_group": "^3.2",
         "drupal/image_widget_crop": "^2.3",
         "drupal/key_auth": "^1.1",
         "drupal/mail_login": "^2.4",
