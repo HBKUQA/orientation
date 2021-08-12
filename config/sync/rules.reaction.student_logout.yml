@@ -1,6 +1,6 @@
 uuid: 2d67b22b-9fb4-4dad-ae1b-52fbecd071b0
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: student_logout
 label: 'Student Logout'
