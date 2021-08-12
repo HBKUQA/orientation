@@ -1,0 +1,8 @@
+
+hbku.debug_controller_debug:
+  path: '/hbku/debug'
+  defaults:
+    _controller: '\Drupal\hbku\Controller\DebugController::debug'
+    _title: 'Debug'
+  requirements:
+    _permission: 'access content'
