@@ -1,0 +1,23 @@
+uuid: 6f17b6d3-21b6-4464-8723-26486a56c89f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_order
+    - node.type.orientation_attachment
+id: node.orientation_attachment.field_order
+field_name: field_order
+entity_type: node
+bundle: orientation_attachment
+label: order
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

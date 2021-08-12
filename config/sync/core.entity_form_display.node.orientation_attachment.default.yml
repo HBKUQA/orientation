@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.orientation_attachment.field_attachment
+    - field.field.node.orientation_attachment.field_order
     - field.field.node.orientation_attachment.field_program
     - node.type.orientation_attachment
   module:
@@ -26,6 +27,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_order:
+    weight: 123
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_program:
     weight: 122
