@@ -716,6 +716,7 @@ display:
               alias: ''
               raw_output: false
       auth:
+        - key_auth
         - oauth2
         - cookie
       display_description: ''
@@ -776,6 +777,7 @@ display:
               alias: ''
               raw_output: false
       auth:
+        - key_auth
         - oauth2
         - cookie
       display_description: ''
@@ -1380,6 +1382,7 @@ display:
             json: json
       path: user/%/details
       auth:
+        - key_auth
         - oauth2
         - cookie
       row:

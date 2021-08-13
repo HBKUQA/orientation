@@ -503,6 +503,7 @@ display:
               alias: ''
               raw_output: false
       auth:
+        - key_auth
         - oauth2
         - cookie
       relationships: {  }
@@ -991,6 +992,7 @@ display:
               alias: author
               raw_output: false
       auth:
+        - key_auth
         - oauth2
         - cookie
       display_description: ''
@@ -1488,6 +1490,7 @@ display:
       display_extenders: {  }
       path: api/program/%/chapters
       auth:
+        - key_auth
         - oauth2
         - cookie
       style:

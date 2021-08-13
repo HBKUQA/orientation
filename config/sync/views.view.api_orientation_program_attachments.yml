@@ -638,6 +638,7 @@ display:
               alias: author
               raw_output: false
       auth:
+        - key_auth
         - oauth2
         - cookie
       display_description: ''

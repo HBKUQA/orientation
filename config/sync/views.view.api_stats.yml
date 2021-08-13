@@ -363,6 +363,10 @@ display:
             type_1:
               alias: ''
               raw_output: false
+      auth:
+        - key_auth
+        - oauth2
+        - cookie
     cache_metadata:
       max-age: -1
       contexts:
