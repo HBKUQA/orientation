@@ -26,7 +26,7 @@
 /web/sites/*/cache/
 # Ignore drupal core (if not versioning drupal sources)
 /vendor/
-!/vendor/simplesamlphp
+!vendor/simplesamlphp/
 /web/core/
 /web/profiles/
 /web/.csslintrc
