@@ -112,7 +112,7 @@ class RedirectUser extends RulesActionBase implements ContainerFactoryPluginInte
       }
     }
 
-    $url = 'http://localhost:3000/login?token=' . $api_key;
+    $url = 'https://orientation.hbku.edu.qa/login?token=' . $api_key;
     $this->request->attributes->set('_rules_redirect_action_url', $url);
   }
 
