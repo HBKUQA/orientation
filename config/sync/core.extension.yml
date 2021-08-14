@@ -46,6 +46,7 @@ module:
   path: 0
   path_alias: 0
   rdf: 0
+  redirect: 0
   rest: 0
   rest_views: 0
   rest_views_revisions: 0
@@ -54,7 +55,6 @@ module:
   serialization: 0
   shortcut: 0
   simple_oauth: 0
-  simplesamlphp_auth: 0
   system: 0
   taxonomy: 0
   text: 0

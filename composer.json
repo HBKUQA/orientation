@@ -40,6 +40,7 @@
         "drupal/module_filter": "^3.2",
         "drupal/paragraphs": "^1.12",
         "drupal/pathauto": "^1.8",
+        "drupal/redirect": "^1.6",
         "drupal/redirect_after_login": "^2.7",
         "drupal/redirect_after_logout": "^1.1",
         "drupal/rest_views": "^2.0",
