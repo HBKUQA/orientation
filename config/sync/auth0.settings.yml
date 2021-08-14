@@ -9,7 +9,7 @@ auth0_username_claim: nickname
 auth0_login_css: "#a0-widget .a0-panel {\r\n    min-width: 90%;\r\n    padding: 5%;\r\n    box-shadow: none;\r\n    -webkit-box-shadow: none;\r\n}\r\n#a0-widget .a0-panel {\r\n    background-color: #f6f6f2;\r\n    border-color: #f9f9f9;\r\n}"
 auth0_auto_register: 1
 auth0_lock_extra_settings: ''
-auth0_claim_mapping: 'https://orientationapi.hbku.edu.qa/rules|field_full_name'
+auth0_claim_mapping: nickname|field_full_name
 auth0_claim_to_use_for_role: 'https://orientationapi.hbku.edu.qa/rules'
 auth0_role_mapping: student|student
 auth0_client_id: yFlY0gc6k4timTbXKX1vhexSu93MFMGj
