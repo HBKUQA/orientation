@@ -1,14 +1,14 @@
 # Ignore configuration files that may contain sensitive information
 .idea/
-#/web/sites/*/*settings*.php
+/web/sites/*/*settings*.php
 
 /front
-#/web/sites/*/*.services*.yml
+/web/sites/*/*.services*.yml
 
 
-#/web/sites/*settings*.php
-#/web/sites/*services*.yml
-#/web/sites/*sites*.php
+/web/sites/*settings*.php
+/web/sites/*services*.yml
+/web/sites/*sites*.php
 # Ignore paths that may contain user-generated content
 /web/sites/*/files
 /web/sites/*/files/.htacess
@@ -26,7 +26,6 @@
 /web/sites/*/cache/
 # Ignore drupal core (if not versioning drupal sources)
 /vendor/
-!/vendor/simplesamlphp/
 /web/core/
 /web/profiles/
 /web/.csslintrc
