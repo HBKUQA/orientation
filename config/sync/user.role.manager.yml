@@ -61,6 +61,7 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own student content'
   - 'edit own video media'
+  - 'restful get student_progress_stats_rest_resource'
   - 'update any media'
   - 'update media'
   - 'update paragraph content paragraph'

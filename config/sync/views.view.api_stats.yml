@@ -5,7 +5,6 @@ dependencies:
   config:
     - node.type.orientation_chapter
     - node.type.orientation_program
-    - node.type.student_review
   module:
     - node
     - rest
@@ -268,7 +267,6 @@ display:
           value:
             orientation_chapter: orientation_chapter
             orientation_program: orientation_program
-            student_review: student_review
           group: 1
           exposed: false
           expose:

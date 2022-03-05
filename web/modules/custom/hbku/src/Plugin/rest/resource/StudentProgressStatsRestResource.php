@@ -118,9 +118,17 @@ class StudentProgressStatsRestResource extends ResourceBase
     }
 
     $total_programs = $this->countPrograms();
+    $student_name = '';
+    $student = $entity_manager->getStorage('user')->load($sid);
+    if ($student instanceof \Drupal\user\UserInterface) {
+      $student_name = $student->label();
+    }
+    $total = round($total_progress / $total_programs);
+    if ($total > 100) $total = 100;
     return [
       'uid' => $sid,
-      'total_progress' => ($total_progress / $total_programs),
+      'student_name' => $student_name,
+      'total_progress' => $total,
     ];
   }
 
