@@ -1,0 +1,11 @@
+uuid: 544bcf44-f8df-42fc-9f7d-d4f1277b05a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.program_quiz
+id: node.program_quiz
+target_entity_type_id: node
+target_bundle: program_quiz
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: 85534ce1-2ca7-4311-87be-5d70211df113
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program_quiz_answers.field_program
+    - field.field.node.program_quiz_answers.field_quiz_multiple_questions
+    - field.field.node.program_quiz_answers.field_related_quiz
+    - field.field.node.program_quiz_answers.field_student
+    - node.type.program_quiz_answers
+  module:
+    - user
+id: node.program_quiz_answers.teaser
+targetEntityType: node
+bundle: program_quiz_answers
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_program: true
+  field_quiz_multiple_questions: true
+  field_related_quiz: true
+  field_student: true
+  langcode: true

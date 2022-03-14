@@ -1,0 +1,19 @@
+uuid: b7d7373c-d1fb-4ca2-8d3a-a0c6f33c10d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quiz_question
+    - paragraphs.paragraphs_type.quiz_question
+id: paragraph.quiz_question.field_quiz_question
+field_name: field_quiz_question
+entity_type: paragraph
+bundle: quiz_question
+label: Question
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

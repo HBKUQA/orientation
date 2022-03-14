@@ -1,0 +1,10 @@
+uuid: 492f44ca-477f-4aa9-8ae5-293a8d706ecc
+langcode: en
+status: true
+dependencies: {  }
+id: quiz_question
+label: Question
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

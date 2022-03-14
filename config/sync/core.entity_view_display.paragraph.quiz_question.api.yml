@@ -1,0 +1,54 @@
+uuid: 28f4de7e-fdb8-4506-8ef8-2bfccb970c2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.api
+    - field.field.paragraph.quiz_question.field_quiz_answers
+    - field.field.paragraph.quiz_question.field_quiz_question
+    - paragraphs.paragraphs_type.quiz_question
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_quiz_question
+        - field_quiz_answers
+id: paragraph.quiz_question.api
+targetEntityType: paragraph
+bundle: quiz_question
+mode: api
+content:
+  field_quiz_answers:
+    type: string
+    weight: 1
+    region: ds_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_quiz_question:
+    type: string
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden: {  }

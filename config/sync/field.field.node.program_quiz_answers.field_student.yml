@@ -1,0 +1,28 @@
+uuid: a2427ddb-a551-4ed1-ac7e-65585face38b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student
+    - node.type.program_quiz_answers
+id: node.program_quiz_answers.field_student
+field_name: field_student
+entity_type: node
+bundle: program_quiz_answers
+label: Student
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

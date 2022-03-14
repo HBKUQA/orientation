@@ -1,0 +1,10 @@
+uuid: 090f5b81-4e63-47e8-9ece-ad8098a60fbf
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.api
+label: API
+targetEntityType: paragraph
+cache: true

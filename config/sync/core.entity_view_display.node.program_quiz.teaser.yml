@@ -1,0 +1,27 @@
+uuid: 68ee48eb-1bfe-4684-9195-c896dcd1d855
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program_quiz.field_description
+    - field.field.node.program_quiz.field_program
+    - field.field.node.program_quiz.field_quiz_multiple_questions
+    - node.type.program_quiz
+  module:
+    - user
+id: node.program_quiz.teaser
+targetEntityType: node
+bundle: program_quiz
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_description: true
+  field_program: true
+  field_quiz_multiple_questions: true
+  langcode: true
