@@ -1,0 +1,20 @@
+uuid: df656ca8-c688-4977-9639-e4f9fa9253de
+langcode: en
+status: true
+dependencies:
+  module:
+    - hbku
+    - key_auth
+    - serialization
+    - simple_oauth
+id: program_student_quiz_resource
+plugin_id: program_student_quiz_resource
+granularity: resource
+configuration:
+  methods:
+    - POST
+  formats:
+    - json
+  authentication:
+    - key_auth
+    - oauth2

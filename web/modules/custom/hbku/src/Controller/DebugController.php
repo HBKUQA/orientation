@@ -3,13 +3,7 @@
 namespace Drupal\hbku\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-
-use Drupal\Core\Routing\TrustedRedirectResponse;
-use Drupal\key_auth\KeyAuth;
-use Drupal\key_auth\KeyAuthInterface;
-use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
-
-use Symfony\Component\HttpFoundation\RedirectResponse;
+use Drupal\Core\Entity\EntityStorageException;
 
 /**
  * Class DebugController.
@@ -25,37 +19,76 @@ class DebugController extends ControllerBase
    */
   public function debug() {
 //    dpm('test');
-    $entity_manager = \Drupal::entityTypeManager();
-    $users = $entity_manager->getStorage('user')->load(4);
-    dpm($users);
+//    $entity_manager = \Drupal::entityTypeManager();
+//    $users = $entity_manager->getStorage('paragraph')->load(70);
+//    dpm($users);
+//
+//    $entity_manager = \Drupal::entityTypeManager();
+//    $progress = $entity_manager->getStorage('node')->loadByProperties([
+//      'type' => 'student_progress',
+//      'status' => TRUE,
+//      'uid' => 4,
+//    ]);
+//
+//    $programID = 15;
+//    $relatedQuiz = 4158;
+//    $studentID = 1;
+//    $title = 'Student Quiz ' . '-' . $programID . '-' . $studentID;
+//
+//    $studentQuiz = \Drupal::entityTypeManager()->getStorage('node')->create(
+//      [
+//        'type' => 'program_quiz_answers',
+//        'title' => $title,
+//      ]
+//    );
+//
+//    $studentQuiz->set('field_program', $programID);
+//    $studentQuiz->set('field_related_quiz', $relatedQuiz);
+//    $studentQuiz->set('field_student', $studentID);
+//    $studentQuiz->set('uid', $studentID);
+//
+//    try {
+////      $studentQuiz->save();
+//    } catch (EntityStorageException $e) {
+//      dpm($e);
+//    }
 
-    $entity_manager = \Drupal::entityTypeManager();
-    $progress = $entity_manager->getStorage('node')->loadByProperties([
-      'type' => 'student_progress',
-      'status' => TRUE,
-      'uid' => 4,
-    ]);
+//    $quizQuestionParagraph = \Drupal::entityTypeManager()->getStorage('paragraph')->create(
+//      ['type' => 'quiz_question']);
+//    $quizQuestionParagraph->set('field_quiz_question', 'question one');
+//    $asnwser = [
+//      0 => ['value' => "answer 1"],
+//      1 => ['value' => "answer 1"],
+//      2 => ['value' => "answer 1"],
+//    ];
+//    $quizQuestionParagraph->set('field_quiz_answers', $asnwser);
+//    try {
+////      $quizQuestionParagraph->save();
+////      dpm($quizQuestionParagraph->id());
+//    } catch (EntityStorageException $e) {
+//      dpm($e);
+//    }
 
-    $query = \Drupal::entityQuery('node');
-    $query->condition('type', 'orientation_program');
-    $query->condition('status', TRUE);
-
-    dpm($query->count()->execute());
-
-//    dpm($progress[202]);
-    if ($progress[202] instanceof \Drupal\node\NodeInterface) {
-
-      dpm($progress[202]->get('field_process')->value);
-//      dpm($progress->get('field_process')->getValue());
-    }
-
-    $query = \Drupal::entityQuery('node');
-    $query->condition('type', 'student_progress');
-    $query->condition('status', TRUE);
-    $query->condition('uid', 4);
-
-    $result = $query->execute();
-    dpm($result);
+//    $query = \Drupal::entityQuery('node');
+//    $query->condition('type', 'orientation_program');
+//    $query->condition('status', TRUE);
+//
+//    dpm($query->count()->execute());
+//
+////    dpm($progress[202]);
+//    if ($progress[202] instanceof \Drupal\node\NodeInterface) {
+//
+//      dpm($progress[202]->get('field_process')->value);
+////      dpm($progress->get('field_process')->getValue());
+//    }
+//
+//    $query = \Drupal::entityQuery('node');
+//    $query->condition('type', 'student_progress');
+//    $query->condition('status', TRUE);
+//    $query->condition('uid', 4);
+//
+//    $result = $query->execute();
+//    dpm($result);
 
 //    $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
 //    if (!$user instanceof \Drupal\user\UserInterface) {
