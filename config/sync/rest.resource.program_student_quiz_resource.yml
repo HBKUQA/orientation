@@ -7,6 +7,7 @@ dependencies:
     - key_auth
     - serialization
     - simple_oauth
+    - user
 id: program_student_quiz_resource
 plugin_id: program_student_quiz_resource
 granularity: resource
@@ -18,3 +19,4 @@ configuration:
   authentication:
     - key_auth
     - oauth2
+    - cookie

@@ -62,6 +62,7 @@ permissions:
   - 'edit own student content'
   - 'edit own video media'
   - 'restful get student_progress_stats_rest_resource'
+  - 'restful post program_student_quiz_resource'
   - 'update any media'
   - 'update media'
   - 'update paragraph content paragraph'
@@ -70,4 +71,5 @@ permissions:
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view paragraph content paragraph'
+  - 'view paragraph content quiz_question'
   - 'view unpublished paragraphs'
