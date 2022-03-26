@@ -1,0 +1,32 @@
+uuid: 7f38f040-fce4-4db9-abb8-70e8709d46a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.api
+    - field.field.paragraph.question_answers.field_quiz_answer
+    - field.field.paragraph.question_answers.field_quiz_answer_is_correct
+    - paragraphs.paragraphs_type.question_answers
+  module:
+    - rest_views
+id: paragraph.question_answers.api
+targetEntityType: paragraph
+bundle: question_answers
+mode: api
+content:
+  field_quiz_answer:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quiz_answer_is_correct:
+    type: boolean_export
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

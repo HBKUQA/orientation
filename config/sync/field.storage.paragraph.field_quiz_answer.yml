@@ -1,11 +1,11 @@
-uuid: be13bf43-4afc-4417-9bfb-3fcf594ecc8d
+uuid: 76badf45-d3de-4fae-9e27-610261e3637f
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_quiz_answers
-field_name: field_quiz_answers
+id: paragraph.field_quiz_answer
+field_name: field_quiz_answer
 entity_type: paragraph
 type: string
 settings:
@@ -14,7 +14,7 @@ settings:
   case_sensitive: false
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

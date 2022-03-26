@@ -76,29 +76,7 @@ class ProgramStudentQuizResource extends ResourceBase
     $studentQuiz->set('field_student', $studentID);
     $studentQuiz->set('uid', $studentID);
 
-    $quizQuestionParagraphs = [];
-    foreach ($payload['quiz_multiple_questions'] as $key => $value) {
-      $quizQuestionParagraph = \Drupal::entityTypeManager()->getStorage('paragraph')->create(
-        ['type' => 'quiz_question']);
-      $quizQuestionParagraph->set('field_quiz_question', $value['quiz_question']);
-      $answser = [];
-      foreach ($value['quiz_answers'] as $answer) {
-        $answser[] = [
-          'value' => $answer,
-        ];
-      }
-
-      $quizQuestionParagraph->set('field_quiz_answers', $answser);
-      try {
-        $quizQuestionParagraph->save();
-        $quizQuestionParagraphs[] = [
-          'target_id' => $quizQuestionParagraph->id(),
-          'target_revision_id' => $quizQuestionParagraph->getRevisionId(),
-        ];
-      } catch (EntityStorageException $e) {
-        throw new AccessDeniedHttpException();
-      }
-    }
+    $quizQuestionParagraphs = $this->saveQuizQuestion($payload['quiz_multiple_questions']);
 
     $studentQuiz->set('field_quiz_multiple_questions', $quizQuestionParagraphs);
 
@@ -110,6 +88,58 @@ class ProgramStudentQuizResource extends ResourceBase
     } catch (EntityStorageException $e) {
       throw new AccessDeniedHttpException();
     }
+  }
+
+  private function saveQuizQuestion($quizMultipleQuestion) {
+    $questionParagraphs = [];
+    foreach ($quizMultipleQuestion as $quizAnswers) {
+      $quizQuestionParagraph = \Drupal::entityTypeManager()
+        ->getStorage('paragraph')
+        ->create(['type' => 'quiz_question']);
+
+      $quizQuestionParagraph->set('field_quiz_question', $quizAnswers['quiz_question']);
+
+      $questionParagraphAnswers = $this->saveQuizQuestionAnswers($quizAnswers['quiz_answers']);
+
+      $quizQuestionParagraph->set('field_answers', $questionParagraphAnswers);
+
+      try {
+        $quizQuestionParagraph->save();
+        $questionParagraphs[] = [
+          'target_id' => $quizQuestionParagraph->id(),
+          'target_revision_id' => $quizQuestionParagraph->getRevisionId(),
+        ];
+      } catch (EntityStorageException $e) {
+        throw new AccessDeniedHttpException();
+      }
+    }
+
+    return $questionParagraphs;
+  }
+
+  private function saveQuizQuestionAnswers($answers) {
+    $answersParagraphs = [];
+
+    foreach ($answers as $answer) {
+      $quizQuestionAnswer = \Drupal::entityTypeManager()->getStorage('paragraph')
+        ->create(['type' => 'question_answers']);
+
+      $quizQuestionAnswer->set('field_quiz_answer', $answer['answer']);
+      $quizQuestionAnswer->set('field_quiz_answer_is_correct', $answer['correct']);
+
+      try {
+
+        $quizQuestionAnswer->save();
+        $answersParagraphs[] = [
+          'target_id' => $quizQuestionAnswer->id(),
+          'target_revision_id' => $quizQuestionAnswer->getRevisionId(),
+        ];
+      } catch (EntityStorageException $e) {
+        throw new AccessDeniedHttpException();
+      }
+    }
+
+    return $answersParagraphs;
   }
 
 }

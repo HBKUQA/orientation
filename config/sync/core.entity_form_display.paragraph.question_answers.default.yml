@@ -1,0 +1,31 @@
+uuid: add6a2bf-6746-41ff-a35e-cde326f07fee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.question_answers.field_quiz_answer
+    - field.field.paragraph.question_answers.field_quiz_answer_is_correct
+    - paragraphs.paragraphs_type.question_answers
+id: paragraph.question_answers.default
+targetEntityType: paragraph
+bundle: question_answers
+mode: default
+content:
+  field_quiz_answer:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quiz_answer_is_correct:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true

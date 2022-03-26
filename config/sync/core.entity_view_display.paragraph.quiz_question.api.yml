@@ -4,11 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.api
-    - field.field.paragraph.quiz_question.field_quiz_answers
+    - field.field.paragraph.quiz_question.field_answers
     - field.field.paragraph.quiz_question.field_quiz_question
     - paragraphs.paragraphs_type.quiz_question
   module:
     - ds
+    - rest_views_revisions
 third_party_settings:
   ds:
     layout:
@@ -29,20 +30,29 @@ third_party_settings:
     regions:
       ds_content:
         - field_quiz_question
-        - field_quiz_answers
+        - field_answers
 id: paragraph.quiz_question.api
 targetEntityType: paragraph
 bundle: quiz_question
 mode: api
 content:
-  field_quiz_answers:
-    type: string
+  field_answers:
+    type: entity_reference_revisions_export
     weight: 1
     region: ds_content
     label: above
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
+      view_mode: api
+      extra:
+        id: id
+        title: 0
+        url: 0
+        type: 0
+        bundle: 0
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
   field_quiz_question:
     type: string
     weight: 0

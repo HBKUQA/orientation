@@ -1,0 +1,37 @@
+uuid: 0dee9f7b-ecb2-4b25-837a-9f5a1d498b73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_answers
+    - paragraphs.paragraphs_type.question_answers
+    - paragraphs.paragraphs_type.quiz_question
+  module:
+    - entity_reference_revisions
+id: paragraph.quiz_question.field_answers
+field_name: field_answers
+entity_type: paragraph
+bundle: quiz_question
+label: Answers
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      question_answers: question_answers
+    target_bundles_drag_drop:
+      paragraph:
+        weight: 4
+        enabled: false
+      question_answers:
+        enabled: true
+        weight: 5
+      quiz_question:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,19 @@
+uuid: b371f5eb-0799-4447-b341-226d86d22bd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quiz_answer
+    - paragraphs.paragraphs_type.question_answers
+id: paragraph.question_answers.field_quiz_answer
+field_name: field_quiz_answer
+entity_type: paragraph
+bundle: question_answers
+label: Answer
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
