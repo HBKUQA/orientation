@@ -1,7 +1,9 @@
 <?php
 
+ use Drupal\views\Plugin\views\query\QueryPluginBase; 
+use Drupal\views\ViewExecutable; 
 /**
- * @file
+* @file
  * Contains hbku.module.
  */
 
@@ -21,4 +23,22 @@ function hbku_help($route_name, RouteMatchInterface $route_match) {
 
     default:
   }
+}
+
+function hbku_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() == 'api_users' && $view->current_display == 'rest_export_salah') {
+	  //$results = $view->result;
+	  $query->addField('node_field_data_users_field_data__node__field_process','field_process_value','test',['aggregate'=>true,'function'=>'avg']);//'AVG(node_field_data_users_field_data__node__field_process.field_process_value) as `total progress`');
+    	  $query->addGroupBy('users_field_data.uid');
+  }
+}
+
+
+function hbku_views_post_render(&$view, &$output, &$cache) {
+	if($view->id() == 'api_users' && $view->current_display == 'reset_export_salah'){
+	$results = &$output;
+        foreach($results as $result) {
+            $result->MY_CUSTOM_KEY= "MY CUSTOM VALUE";
+        }
+	}
 }
